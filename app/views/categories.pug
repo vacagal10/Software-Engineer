@@ -1,0 +1,8 @@
+extends layout 
+
+block content
+  h1 Categories List
+  ul
+    each category in categories
+      li
+        a(href="/categories/" + category.category_id)= category.category_name

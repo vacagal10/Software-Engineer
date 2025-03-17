@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 #{heading}
+  table(border="1")
+    tr
+      th ID
+      th Name
+    each student in students
+      tr
+        td= student.id
+        td= student.name

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Single Student Page
+  div
+    b Student:
+    |  #{student}
+  div
+    b Programme:
+    |  #{programme}
+  if modules.length
+    h2 Modules
+    table(border="1")
+      each mod in modules
+        tr
+          td #{mod.code}
+          td #{mod.name}
+  else
+    p No modules found.

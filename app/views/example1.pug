@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{heading}
+  p #{description}
+  ul
+    each item in items
+      li= item

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Programmes List
+  ul
+    each programme in programmes
+      li
+        a(href="/programme/" + programme.id)= programme.name

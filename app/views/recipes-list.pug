@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Recipe List
+  ul
+    each recipe in recipes
+      li
+        a(href="/recipes/" + recipe.recipe_id)= recipe.title
+        p Image URL: #{recipe.image}

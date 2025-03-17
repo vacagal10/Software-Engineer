@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Module: #{module.name}
+  div
+    b Code:
+    |  #{module.code}
+  div
+    b Associated Programme:
+    |  #{programme.name}
+  if students.length
+    h2 Students Enrolled in Programme #{programme.name}
+    ul
+      each student in students
+        li #{student.name}
+  else
+    p No students enrolled.
